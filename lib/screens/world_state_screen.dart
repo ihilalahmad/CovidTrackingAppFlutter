@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:covid_tracker_app_flutter/components/covid_records.dart';
+import 'package:covid_tracker_app_flutter/components/component_covid_records.dart';
 import 'package:covid_tracker_app_flutter/models/WorldRecordsModel.dart';
-import 'package:covid_tracker_app_flutter/screens/country_list.dart';
+import 'package:covid_tracker_app_flutter/screens/countries_list_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http ;
 
@@ -40,7 +40,8 @@ class _WorldStateScreenState extends State<WorldStateScreen> {
               Text(
                 "World Covid Records",
                 style: TextStyle(
-                    fontSize: 30
+                    fontSize: 30,
+                  fontWeight: FontWeight.w400
                 ),
               ),
               SizedBox(height: 40,),
@@ -103,7 +104,7 @@ class _WorldStateScreenState extends State<WorldStateScreen> {
               ),
               SizedBox(height: 40,),
               Container(
-                width: 250,
+                width: 300,
                 height: 50,
                 child: ElevatedButton(
                   child: Text(

@@ -1,13 +1,9 @@
-import 'package:covid_tracker_app_flutter/screens/my_custom_dialog.dart';
+import 'package:covid_tracker_app_flutter/components/my_custom_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class CountriesList extends StatelessWidget {
-  final String countryName;
-  final String countryFlag;
-  final String activeCases;
-  final String totalDeaths;
-  final String totalRecovered;
+  final String countryName, countryFlag, activeCases, totalDeaths, totalRecovered;
 
   CountriesList({
     required this.countryName,
@@ -27,7 +23,13 @@ class CountriesList extends StatelessWidget {
           showDialog(
               context: context,
               builder: (BuildContext context) {
-                return CustomDialog(countryName: countryName, countryFlag: countryFlag, activeCases: activeCases, totalDeaths: totalDeaths, totalRecovered: totalRecovered);
+                return CustomDialog(
+                    countryName: countryName,
+                    countryFlag: countryFlag,
+                    activeCases: activeCases,
+                    totalDeaths: totalDeaths,
+                    totalRecovered: totalRecovered,
+                );
               }
           );
         },
